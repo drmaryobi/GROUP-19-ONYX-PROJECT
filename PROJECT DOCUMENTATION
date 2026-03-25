@@ -1,0 +1,665 @@
+ 
+
+PROJECT DOCUMENTATION 
+
+ 
+
+Climate Change & 
+
+Crop Yields in West Africa 
+
+ 
+
+Visualizing how rising temperatures impact staple African crop yields 
+
+SDG 2: Zero Hunger  ·  SDG 13: Climate Action 
+
+ 
+
+Nigeria 
+
+Ghana 
+
+Mali 
+
+Senegal 
+
+Côte d’Ivoire  ·  Cassava · Maize · Rice · Sorghum  ·  2000–2024 
+
+ 
+
+Tools: Microsoft Excel  ·  Power Query  ·  Power BI 
+
+ 
+
+Data Source: FAO STAT  |  Analysis Period: 2000–2024  |  Version 1.0 
+
+ 
+
+​​ 
+
+​​ 
+
+ 
+
+1. Project Overview 
+
+ 
+
+1.1 Background 
+
+West Africa is home to over 400 million people, the majority of whom depend on subsistence and smallholder agriculture for their livelihoods and food security. The region produces four principal staple crops — cassava, maize, rice, and sorghum — which together form the dietary foundation of communities across Nigeria, Ghana, Mali, Senegal, and Côte d’Ivoire. 
+
+Scientific consensus and observational data confirm that West Africa is warming at a rate approximately 1.5 times faster than the global average. Changes in temperature, rainfall variability, and the frequency of extreme weather events are directly threatening agricultural productivity, yet a clear, data-driven picture of these impacts has remained largely inaccessible to policymakers, agricultural planners, and the public. 
+
+1.2 Problem Statement 
+
+This project addresses a critical gap: the absence of an accessible, interactive visualization platform that links historical climate trends to measurable changes in staple crop yields across West Africa. Without such a tool: 
+
+Governments cannot target agricultural interventions effectively. 
+
+Researchers lack a consolidated view of cross-country yield divergences. 
+
+Development organisations cannot communicate the urgency of climate adaptation to non-technical stakeholders. 
+
+ 
+
+Key Project Fact 
+
+ 
+
+Nigeria — the continent’s most populous nation — saw cassava yields collapse from a peak of 12,216 kg/ha in 2010 to just 5,841 kg/ha in 2024, a decline of over 52%. Ghana, meanwhile, nearly doubled its cassava yields over the same period. These diverging trajectories tell a story of policy, climate, and resilience that demands urgent analytical attention. 
+
+ 
+
+1.3 Project Goals 
+
+Collect and consolidate 25 years (2000–2024) of FAO crop yield data for 5 West African countries and 4 staple crops into a structured Excel workbook. 
+
+Use Power Query to clean, transform, and model the dataset for analysis. 
+
+Apply Excel-based statistical tools to identify long-term yield trends and anomalies. 
+
+Build an interactive Power BI dashboard enabling dynamic exploration of crop-climate relationships. 
+
+Integrate AI-powered narrative insights to make findings accessible to non-technical audiences. 
+
+Align findings with SDG 2 (Zero Hunger) and SDG 13 (Climate Action) reporting frameworks. 
+
+1.4 SDG Alignment 
+
+ 
+
+SDG Goal 
+
+Relevance to This Project 
+
+SDG 2: Zero Hunger 
+
+The project directly informs strategies to improve food security by identifying which countries and crops are most vulnerable to climate-driven yield loss, enabling targeted agricultural investment. 
+
+SDG 13: Climate Action 
+
+By quantifying the measurable impact of temperature and rainfall variability on crop productivity, the project provides evidence for urgent climate adaptation policies in the agricultural sector. 
+
+SDG 17: Partnerships for the Goals 
+
+The open-data and Microsoft 365 approach is designed to be replicable by governments, NGOs, and research institutions without specialist programming knowledge. 
+
+ 
+
+2. Target Users 
+
+ 
+
+2.1 Primary Users 
+
+The platform is designed for a diverse set of stakeholders who interact with agricultural and climate data at different levels of technical sophistication. Critically, the Microsoft Excel and Power BI stack was chosen so that most users can engage with the underlying data directly, without needing specialist software. 
+
+ 
+
+User Group 
+
+How They Use the Platform 
+
+Government Agricultural Ministries 
+
+Explore yield trends by country and crop in Power BI, export filtered tables to Excel for budget reports, and share dashboards via Power BI Service. 
+
+National Food Security Agencies 
+
+Monitor multi-year production patterns, drill down into anomaly years, and embed Power BI reports into existing agency portals. 
+
+International Development Organisations (FAO, IFAD, World Bank) 
+
+Access aggregated cross-country analyses and download the master Excel workbook for further modelling. 
+
+Academic Researchers 
+
+Export raw Power Query outputs as CSV, access trend calculations in Excel, and reference the documented M-code and DAX measures. 
+
+Climate & Agricultural NGOs 
+
+Use Power BI’s built-in sharing features to produce donor-ready visual reports without additional software. 
+
+Data Journalists & Media 
+
+Export charts directly from Power BI as PNG or PDF for publication. 
+
+ 
+
+2.2 Secondary Users 
+
+University students and lecturers in agriculture, environmental science, and development economics — the Excel workbook serves as a self-contained teaching dataset. 
+
+Private sector agribusinesses assessing supply chain climate risks in West Africa. 
+
+Farmers’ cooperative organisations seeking data to negotiate with governments and finance institutions. 
+
+2.3 Accessibility Considerations 
+
+A key advantage of the Microsoft 365 stack is its wide accessibility across government and academic institutions in West Africa: 
+
+Excel is pre-installed on most organisational computers across the region, requiring no additional software procurement. 
+
+Power BI Desktop is free to download; Power BI Service allows browser-based access without installation. 
+
+All Excel worksheets include data validation, dropdown filters, and formula explanations for non-expert users. 
+
+Power BI reports are published with mobile layout views optimised for tablet and smartphone screens. 
+
+French-language report labels are included for Mali, Senegal, and Côte d’Ivoire stakeholders. 
+
+ 
+
+3. Solution Explanation 
+
+ 
+
+3.1 Solution Architecture 
+
+The solution is built entirely within the Microsoft ecosystem: raw FAO data is ingested and cleaned in Power Query (within Excel), structured into an analytical data model, and then connected to Power BI for interactive visualisation and reporting. The three-layer architecture ensures that every step from raw data to published insight is traceable, reproducible, and auditable. 
+
+ 
+
+Architecture Overview 
+
+ 
+
+Layer 1 — Raw Data: FAO STAT CSV files (500 rows across 5 countries, 4 crops, 25 years) 
+
+Layer 2 — Transformation: Power Query (M language) for cleaning, shaping, and merging datasets 
+
+Layer 3 — Analysis: Excel workbook with structured tables, pivot tables, trend calculations, and DAX measures 
+
+Layer 4 — Visualisation: Power BI Desktop report connected to the Excel data model, published to Power BI Service 
+
+ 
+
+3.2 Data Collection & Preparation 
+
+Raw yield data was downloaded from the FAO STAT portal in CSV format, covering yield data (kg/ha) for the following dimensions: 
+
+ 
+
+Dimension 
+
+Values Covered 
+
+Countries 
+
+Nigeria, Ghana, Mali, Senegal, Côte d’Ivoire 
+
+Crops 
+
+Cassava, Maize, Rice, Sorghum 
+
+Time Period 
+
+2000 – 2024 (25 years, 500 data points) 
+
+Format 
+
+CSV files downloaded from FAOSTAT, one file per country 
+
+ 
+
+3.3 Power Query Transformation Steps 
+
+All data cleaning and transformation was performed in Power Query Editor within Excel. The following transformation steps were applied: 
+
+Source connection: Connected to the five FAO STAT CSV files using the ‘From Folder’ connector to batch-load all country files simultaneously. 
+
+Column filtering: Removed irrelevant FAO metadata columns (flag descriptions, domain codes, area codes), retaining only Country, Year, Crop, and Yield (kg/ha). 
+
+Data type enforcement: Set Year to Whole Number, Yield to Decimal Number, Country and Crop to Text. 
+
+Null handling: Replaced null yield values using the Fill Down method where sequential years were missing; flagged estimated values with a Boolean ‘IsEstimated’ column. 
+
+Append queries: Combined all five country queries into a single master table using ‘Append Queries as New’. 
+
+Crop name standardisation: Applied a Replace Values step to ensure consistent crop naming across all source files (e.g., ‘Cassava and products’ → ‘Cassava’). 
+
+Year range filter: Applied a row filter to retain only years 2000–2024. 
+
+Load to Excel table: Loaded the final query output to an Excel table named ‘MasterYieldData’ for use as the analysis and Power BI data source. 
+
+3.4 Key Data Findings 
+
+Analysis of 25 years of yield data reveals sharply diverging trajectories across the five countries: 
+
+ 
+
+Country / Crop 
+
+Key Trend (2000–2024) 
+
+Ghana — Cassava 
+
+Yield doubled from 12,281 to 25,865 kg/ha (+110%) — strongest performance in the dataset. 
+
+Nigeria — Cassava 
+
+Yield collapsed from 12,216 kg/ha (2010) to 5,841 kg/ha (2024) — a 52% decline. 
+
+Senegal — Cassava 
+
+Yield tripled from 4,888 to 14,803 kg/ha, driven by PNAR investment and irrigation. 
+
+Côte d’Ivoire — Cassava 
+
+Sustained 32% decline from 7,743 (2000) to 5,261 (2021), partially recovered by 2024. 
+
+Senegal — Rice 
+
+Yields grew from 2,345 to 3,851 kg/ha, supported by irrigated paddy expansion. 
+
+All Countries — Sorghum 
+
+High year-to-year volatility — a clear signal of rainfall sensitivity. 
+
+All Countries — Maize 
+
+Modest gains (+25% average), but yields remain below regional potential. 
+
+ 
+
+3.5 Power BI Dashboard Features 
+
+The Power BI report connects directly to the ‘MasterYieldData’ Excel table and provides the following interactive modules: 
+
+Country & Crop Slicer Panel: Multi-select slicers for Country, Crop, and Year range, filtering all visuals simultaneously. 
+
+Yield Trend Line Chart: Year-on-year yield line chart with optional trend line overlay, coloured by country. 
+
+Country Comparison Bar Chart: Side-by-side clustered bar chart comparing average yields per crop across all five countries for a selected period. 
+
+Year-over-Year Change Card: KPI card displaying the absolute and percentage yield change for the selected country-crop-year combination. 
+
+Yield Heatmap Matrix: Matrix visual showing yield values colour-coded by performance tier (red → green), for all country-crop combinations across all years. 
+
+Top/Bottom Performer Table: Ranked table of the five highest and five lowest yield years per crop. 
+
+AI Insight Text Box: Dynamically generated plain-language summary of the selected data view (see Section 5). 
+
+Export Button: One-click export of the current report page to PDF or PowerPoint. 
+
+ 
+
+4. Technology Used 
+
+ 
+
+4.1 Microsoft Excel 
+
+Excel serves as the data backbone of the project — the central repository where raw data lands after Power Query transformation, where structured analysis tables live, and from which Power BI draws its data connection. 
+
+ 
+
+Excel Feature 
+
+How It Was Used 
+
+Structured Tables (ListObjects) 
+
+The master dataset is stored as a named Excel Table (‘MasterYieldData’), enabling automatic range expansion and reliable Power BI connectivity. 
+
+Pivot Tables & Pivot Charts 
+
+Used to generate dynamic cross-tabulations of yield by country, crop, and year for exploratory analysis and manual cross-checking of Power BI outputs. 
+
+AVERAGEIFS / MAXIFS / MINIFS 
+
+Calculated country-level and crop-level average, maximum, and minimum yields across specified year ranges. 
+
+TREND & FORECAST.ETS functions 
+
+Applied to project yield trajectories forward under a continuation of recent trends, used to populate the forecasting module in Power BI. 
+
+Conditional Formatting 
+
+Heat-map formatting applied to the yield summary sheet, colour-coding cells from red (lowest yields) to green (highest yields) for rapid visual scanning. 
+
+Data Validation & Dropdowns 
+
+Country and crop dropdown selectors added to the summary sheet for non-technical users to filter the pivot tables without touching raw data. 
+
+Named Ranges 
+
+Key summary ranges named for use in Power Query M-code and Power BI DAX expressions. 
+
+ 
+
+4.2 Power Query (M Language) 
+
+Power Query is the transformation engine of the project. All data ingestion, cleaning, and reshaping logic is written in Power Query’s M language, either through the visual Query Editor or directly in the Advanced Editor. 
+
+ 
+
+Power Query Feature 
+
+How It Was Used 
+
+From Folder Connector 
+
+Batch-loaded all five FAO STAT country CSV files from a single source folder, automating data refresh when source files are updated. 
+
+Append Queries 
+
+Combined five country-level queries into the single ‘MasterYieldData’ table. 
+
+Data Type Detection & Override 
+
+Enforced correct data types (Year as integer, Yield as decimal) after FAO CSV import often defaulted all columns to text. 
+
+Replace Values & Conditional Column 
+
+Standardised crop names and flagged estimated data points with a Boolean column for transparency in Power BI visuals. 
+
+Group By 
+
+Created summary aggregation tables (e.g., average yield per country per crop) used in Power BI as secondary data tables. 
+
+Merge Queries 
+
+Joined the yield master table with a manually maintained country metadata table (region, climate zone, primary language) for geographic context in Power BI. 
+
+Query Folding Awareness 
+
+Queries were structured to maximise query folding back to the CSV source, improving refresh performance. 
+
+Parameters 
+
+A ‘BaseFolder’ parameter was created so the file path can be updated centrally when the project moves to a shared drive or SharePoint location. 
+
+ 
+
+4.3 Microsoft Power BI 
+
+Power BI Desktop is the primary visualisation and reporting tool. The report connects to the Excel ‘MasterYieldData’ table via a live data connection and uses DAX (Data Analysis Expressions) for calculated measures. 
+
+ 
+
+Power BI Feature 
+
+How It Was Used 
+
+Data Model (Star Schema) 
+
+A simple star schema was built: the MasterYieldData fact table joined to a Date dimension table and a Country metadata dimension table. 
+
+DAX Measures 
+
+Calculated measures including: Average Yield, YoY Change (%), Cumulative Yield Growth, and Rolling 5-Year Average Yield. 
+
+Report Slicers 
+
+Synchronised slicers for Country, Crop, and Year allow users to filter all report pages simultaneously with a single selection. 
+
+Conditional Formatting on Visuals 
+
+Table and matrix visuals use data-bar and colour-scale conditional formatting, mirroring the Excel heatmap. 
+
+Bookmarks & Buttons 
+
+Navigation buttons with bookmarks allow users to switch between the ‘Overview’, ‘Country Deep Dive’, and ‘Crop Comparison’ report pages without a separate navigation menu. 
+
+Power BI Service Publishing 
+
+The completed report was published to Power BI Service for browser-based sharing with stakeholders who do not have Power BI Desktop installed. 
+
+Scheduled Data Refresh 
+
+Configured in Power BI Service to automatically refresh the report when the source Excel file (hosted on SharePoint) is updated. 
+
+Mobile Layout 
+
+A dedicated mobile layout was configured for the Overview page, optimised for portrait-orientation viewing on smartphones. 
+
+ 
+
+Why Microsoft 365? 
+
+ 
+
+The Microsoft Excel + Power Query + Power BI stack was deliberately chosen over specialist data science tools because it is already embedded in the working environments of most government ministries, development agencies, and academic institutions across West Africa. This means that stakeholders can not only consume the outputs but also open, verify, and extend the underlying analysis themselves — a critical requirement for long-term institutional uptake. 
+
+ 
+
+5. AI Component Explanation 
+
+ 
+
+5.1 Overview 
+
+Although the core analysis was conducted using Microsoft Excel, Power Query, and Power BI, artificial intelligence was integrated at two key stages: during data preparation and validation, and within the Power BI dashboard as a plain-language insight generation layer. The AI component bridges the gap between statistical outputs and human-readable interpretation. 
+
+5.2 Claude AI (Anthropic) — Insight Generation 
+
+Claude AI was used to generate narrative interpretations of the yield trend data throughout this project. Specifically, Claude was provided with structured data slices from the Excel master table and asked to produce plain-language summaries that could be embedded in the Power BI ‘Insight’ text box and in stakeholder reports. 
+
+ 
+
+Example AI-Generated Insight 
+
+ 
+
+“Ghana demonstrates that with sustained investment in improved planting material, irrigation infrastructure, and market access programmes, cassava yields can double within two decades — even as regional temperatures rise. Nigeria’s trajectory, however, illustrates what happens when these enablers are withdrawn: yields collapse to levels lower than the year 2000 baseline, creating acute food insecurity for the largest population on the continent.” 
+
+ 
+
+— Claude AI pattern analysis across 5 countries × 4 crops × 25 years 
+
+ 
+
+Claude AI was used during the project for the following specific tasks: 
+
+Data review: Claude was provided with the raw FAO dataset to identify inconsistencies, flag outlier years, and highlight country-crop combinations requiring further investigation before Power Query cleaning began. 
+
+Trend narration: After pivot table outputs were produced in Excel, Claude generated plain-language descriptions of each country’s yield trend for use in the final report and Power BI Insight Panel. 
+
+Anomaly contextualisation: Claude was asked to suggest probable explanations for flagged anomalies (e.g., Nigeria 2012–2013 yield collapse, Senegal 2005 cassava spike) drawing on general knowledge of regional agricultural policy and climate events. 
+
+Report drafting: Claude assisted in drafting sections of this project documentation and the accompanying presentation, based on structured prompts containing the analysed data. 
+
+5.3 Power BI AI Visuals 
+
+Power BI’s built-in AI features were also utilised within the dashboard: 
+
+Smart Narrative Visual: Power BI’s Smart Narrative feature was enabled on the Overview page, automatically generating a text summary of the currently selected data view in real time as users adjust slicers. 
+
+Q&A Visual: A Q&A text field was added to the Country Deep Dive page, allowing users to type natural language questions (e.g., ‘What was Ghana’s average cassava yield between 2010 and 2020?’) and receive instant visual answers. 
+
+Anomaly Detection (Preview Feature): Power BI’s built-in anomaly detection was applied to the cassava and maize trend line charts, automatically highlighting statistically unusual data points with explanatory tooltips. 
+
+Key Influencers Visual: Applied to the dataset to surface which country and crop combinations were most strongly associated with above-average and below-average yield performance. 
+
+5.4 Excel AI Assistance 
+
+Within Excel itself, AI-assisted features were used to accelerate analysis: 
+
+Copilot in Excel (where available): Used to generate initial pivot table configurations and suggest conditional formatting rules based on natural language prompts. 
+
+Ideas / Analyze Data feature: Excel’s built-in ‘Analyze Data’ pane was used in the exploratory phase to surface automatically detected trends, outliers, and distribution patterns in the MasterYieldData table. 
+
+Formula suggestions: Excel’s AI-powered formula suggestions assisted in constructing FORECAST.ETS and AVERAGEIFS formulas for the trend projection sheet. 
+
+5.5 Notable Anomalies Identified by AI Review 
+
+The combination of Power BI anomaly detection and Claude AI contextualisation identified the following significant data events warranting attention in the analysis: 
+
+ 
+
+Anomaly 
+
+AI-Suggested Context 
+
+Nigeria Cassava 2012–2013: drop from 11,211 to 7,959 kg/ha 
+
+Post-election insecurity in farming regions; reduction of federal input subsidy programmes. 
+
+Côte d’Ivoire Rice 2010: spike to 3,055 kg/ha 
+
+National Rice Programme expansion; increased irrigated area under post-conflict recovery investment. 
+
+Senegal Cassava 2005: jump to 10,808 kg/ha 
+
+Introduction of high-yielding IITA varieties through ISRA partnership programme. 
+
+Mali Maize 2009: spike to 3,335 kg/ha 
+
+Exceptionally high rainfall year following extended Sahel drought; area expansion. 
+
+Nigeria Cassava 2019: drop to 5,827 kg/ha 
+
+Farmer-herder conflicts disrupting agricultural activity in major cassava-producing states. 
+
+ 
+
+6. Development Process & Lessons Learned 
+
+ 
+
+6.1 Development Methodology 
+
+The project followed an iterative, milestone-based workflow organised into four phases, each producing a tangible deliverable that the team reviewed before proceeding: 
+
+ 
+
+Phase 
+
+Focus & Key Deliverables 
+
+Phase 1: Data Acquisition (Week 1–2) 
+
+Download FAO STAT CSV files. Set up Power Query folder connection. Complete all transformation steps. Produce and validate the MasterYieldData Excel table. 
+
+Phase 2: Analysis (Week 3–4) 
+
+Build Excel pivot tables and summary statistics. Apply conditional formatting heatmap. Run TREND / FORECAST.ETS projections. Document all Excel formulas and Power Query M-code. 
+
+Phase 3: Visualisation (Week 5–6) 
+
+Connect Power BI to Excel data model. Build all four report pages. Configure DAX measures, slicers, bookmarks, and AI visuals. Publish to Power BI Service. 
+
+Phase 4: Reporting & Review (Week 7–8) 
+
+Produce project documentation (this document). Create the PowerPoint presentation. Conduct peer review. Incorporate Claude AI insights into report and dashboard. 
+
+ 
+
+6.2 Team Roles & Contributions 
+
+ 
+
+Role 
+
+Responsibilities 
+
+Data Lead 
+
+FAO STAT data download and folder organisation, Power Query transformation pipeline, MasterYieldData table maintenance, data validation and quality checks. 
+
+Analysis Lead 
+
+Excel pivot tables and summary statistics, TREND/FORECAST.ETS projections, conditional formatting heatmap, DAX measure development in Power BI. 
+
+Visualisation Lead 
+
+Power BI report design across all pages, slicer synchronisation, bookmark navigation, mobile layout configuration, Power BI Service publishing. 
+
+AI & Insights Lead 
+
+Claude AI prompt engineering and insight generation, Power BI Smart Narrative and Q&A visual configuration, anomaly contextualisation, report and presentation writing. 
+
+ 
+
+6.3 Challenges Encountered 
+
+Challenge 1: Inconsistent FAO CSV File Structures 
+
+The FAO STAT CSV files downloaded for different countries were not identically structured — some included additional metadata columns, some used different crop name conventions, and some had varying column header names across download batches. 
+
+Resolution: The Power Query ‘From Folder’ transformation was set to select only named columns (rather than by position), and a Replace Values step was added to standardise all crop name variants. A column selection step was placed after the Append Queries step to enforce a consistent final schema. 
+
+Challenge 2: Excel File Size Growth 
+
+As the project progressed, the Excel workbook grew significantly as pivot caches, chart data, and multiple query outputs accumulated. At one point the file exceeded 45MB, causing slow load times and occasional crashes during pivot table refresh. 
+
+Resolution: Pivot table caches were disabled for non-essential pivots (‘Save source data with file’ unchecked). Charts were moved to separate chart sheets. Power Query ‘Load to Data Model only’ was used for secondary summary queries that did not need to appear as worksheet tables, reducing the overall file size to under 12MB. 
+
+Challenge 3: Power BI DAX Measure Complexity for YoY Calculations 
+
+Calculating year-over-year yield change in DAX required careful handling of the date dimension, because the dataset is annual (not daily), and the standard DATEADD time intelligence functions required a properly marked Date table. 
+
+Resolution: A separate Date dimension table was created in Power Query (List.Numbers generating a sequence from 2000 to 2024), marked as the Date Table in Power BI, and linked to the MasterYieldData Year column. This enabled standard DAX time intelligence functions to work correctly for the YoY change measure. 
+
+Challenge 4: Power BI Smart Narrative Producing Generic Text 
+
+Power BI’s Smart Narrative visual, while useful, initially produced overly generic summaries (“Yield values range from X to Y”) that did not capture the analytical story the team needed to communicate. 
+
+Resolution: Smart Narrative was retained as a supplementary feature but the primary insight text in the dashboard was replaced with a static text visual populated with Claude AI-generated narrative. For each key finding (e.g., Ghana vs. Nigeria cassava comparison), a dedicated Claude-generated insight was formatted and embedded as a fixed text box, updated manually when the slicer selection changes to a new country-crop focus. 
+
+Challenge 5: Sharing Power BI Reports Without Pro Licences 
+
+Several target stakeholders, particularly within government ministries, did not have Power BI Pro licences, which are required to view reports published to Power BI Service workspaces. 
+
+Resolution: The report was also exported as a static PDF for email distribution, and the Power BI file (.pbix) was shared directly for stakeholders with Power BI Desktop (free). For the wider public-facing version, Power BI’s ‘Publish to Web’ feature was used to generate an embeddable iFrame link accessible in any browser without authentication. 
+
+6.4 Lessons Learned 
+
+Design the Power Query pipeline first: Every hour spent carefully structuring the transformation steps in Power Query saves three hours of manual Excel fixes downstream. Investing in a clean, well-documented query pipeline before building any analysis or visuals was the single best decision of the project. 
+
+Name everything: Named tables in Excel, named queries in Power Query, and named measures in Power BI make the project navigable for any team member and dramatically simplify troubleshooting. Unnamed ranges and queries become a maintenance burden very quickly. 
+
+Power BI and Excel are stronger together: The combination of Excel’s familiarity and flexibility for analysis with Power BI’s visualisation and sharing capabilities is more powerful than either tool alone. Keeping Excel as the single source of truth and Power BI as the presentation layer worked well. 
+
+AI narration fills the last mile: The hardest part of data communication is translating a chart into a decision. Claude AI’s narrative generation addressed this gap, producing stakeholder-ready language from structured data in seconds. 
+
+The Ghana-Nigeria contrast is the project’s strongest narrative: Two neighbouring countries with similar starting yields producing radically different trajectories provides both analytical depth and clear policy implications. Centering the Power BI report on this comparison significantly improved stakeholder engagement. 
+
+Licence constraints are a real barrier: The Power BI Pro licensing issue was not anticipated and caused delays in stakeholder sharing. Future projects should audit the licence landscape of target users before choosing a distribution strategy. 
+
+ 
+
+6.5 Future Development Roadmap 
+
+Connect Power BI directly to the FAO STAT REST API using Power Query’s Web connector, enabling fully automated data refresh without manual CSV downloads. 
+
+Extend the dataset to cover Burkina Faso, Niger, and Guinea for broader Sahelian coverage. 
+
+Integrate CHIRPS rainfall anomaly data into the Excel model as a second fact table, enabling a climate-overlay layer in Power BI. 
+
+Build a Power BI Paginated Report version of the Country Summary for high-fidelity print distribution to government ministries. 
+
+Develop a Power Apps interface allowing field agents to submit local yield observations that feed directly into the Excel data model via Power Automate. 
+
+Submit the Power BI dashboard and Excel workbook to ECOWAS and the African Development Bank as a reusable template for regional food security monitoring. 
+
+ 
+
+ 
+
+End of Project Documentation 
+
+Climate Change & Crop Yields in West Africa  ·  SDG 2 · SDG 13  ·  Tools: Excel · Power Query · Power BI 
