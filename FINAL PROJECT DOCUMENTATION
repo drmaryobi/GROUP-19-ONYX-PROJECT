@@ -1,0 +1,294 @@
+FINAL PROJECT DOCUMENTATION 
+
+ 
+
+ 
+
+GROUP 19 - ONYX 
+
+PROJECT TITLE: CLIMATE CHANGE AND CROP YIELDS IN WEST AFRICA 
+
+ 
+
+ACTIVE MEMBERS: 
+
+Deborah Marvelous Omotayo 
+
+Basirat Olusesi 
+
+Nwanekezie Praise Uchechukwu 
+
+Regina Phiri 
+
+Dr Mary Obi 
+
+Ilesanmi Faith Omotola 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+PROJECT OVERVIEW 
+
+This project is about understanding the role of climate change in crop yields in west Africa. It aligns with SDG 2 (Zero hunger) and SDG 13 (Climate action). We attempted to visualize how changing average temperatures and annual temperature are creating an impact on the production of African staple foods. 
+
+In this project, we have demonstrated the effect of rainfall, temperature and other climatic factors on the year-over-Year (YoY) yield growth and production of three (3) staple crops namely cassava, Maize, Rice and Sorghum in 5 west-African countries namely, Nigeria, Ghana, Cote D’Ivoire, Senegal, and Mali between the year 2020 – 2024. 
+
+ 
+
+TARGET USERS 
+
+Researchers 
+
+Government and policy makers  
+
+Entrepreneurs 
+
+Farmers 
+
+Investors 
+
+ 
+
+SOLUTION EXPLANATION 
+
+Graph explanation for the different countries and a call for action to policy makers. 
+
+ 
+
+Our analysis and visualisations have shown measurable changes in crop yields over time. 
+
+From the analysis carried out on the data obtained from FAOSTAT (Food and Agriculture Organisation of the United Nations) and NASA POWER Data Access Viewer, using power query and PowerBi, the following insights were drawn, 
+
+Key Performance Index Cards: 
+
+1. Avergage yield = 4.24K kg/ha 
+
+2. Average temperature = 26.45 degrees celcius 
+
+3. Average rainfall = 614.91 mm 
+
+4. Years = 25 
+
+5. Countries = 5 
+
+This tells us that the study covers a 25-year period across the 5 countries. The average climate conditions show a moderately warm region with moderate rainfall. 
+
+ 
+
+Temperature Trend: Temperature fluctuates slightly but remains relatively stable with slight increases. No extreme spikes, but gradual warming is seen. This reveals that there is proof of gradual climate warming, though not extreme. Climate change is present but not sharply increasing temperature. Subtle warming can still affect crops over time. 
+
+Rainfall Trend: Rainfall is highly variable. Nigeria shows a sharp spike around 2020. Rainfall is unpredictable and inconsistent. Climate change is affecting rainfall patterns more than temperature. Farmers face uncertainty in water availability  
+
+This reveals that some countries show steady increase (e.g., Côte d’Ivoire). Others fluctuate or remain flat. Crop yield is not consistent across countries  
+
+This indicates that productivity depends on:  
+
+1. Local conditions  
+
+2. Climate variability  
+
+3. Farming practices  
+
+  
+
+IMPACT OF CLIMATE ON CROP YIELD  
+
+Temperature against yield scatter plot:  
+From the scatter plot, the points are widely scattered, No strong upward pattern, slight clustering at 26–28°C, some high yields, but also many low yields at same temperature. 
+
+This shows that temperature has a weak and inconsistent relationship with crop yield. Meaning, an Increasing temperature does not guarantee higher yield. High temperature may even stress crops. 
+
+ Rainfall vs Yield (Scatter Plot)  
+
+From this scatter plot, we observe clearer upward clustering than temperature plot. Higher yields occur more often at moderate rainfall levels. Too high rainfall shows decline or inconsistency. This shows that rainfall has a stronger influence on crop yield than temperature. Meaning that adequate rainfall improves yield while too little or too much rainfall reduces productivity. 
+
+ Crop Yield Distribution by Crop Type  
+
+From the crop yield distribution plot, Cassava has the highest yield across countries while the other crops (Rice, Maize, Sorghum) are lower  
+
+This reveals that Crop type significantly affects productivity. Meaning that some crops are more climate-resilient. For example, Cassava performs better under varying conditions  
+
+ 
+
+ 
+
+Overall, Variation in climatic conditions are evident in the following observations: 
+
+ 
+
+1. Temperature is slowly increasing and rainfall is highly unstable.  
+
+2. Rainfall matters more than temperature because it displays stronger relationship with yield. It has direct impact on crop growth. 
+
+3. Temperature effect is weak but risky for reasons such as 
+
+i) No strong benefit to yield  
+
+ii) May cause stress at higher levels  
+
+ 4. Crop yield is inconsistent. It varied by country and crop and is influenced by multiple factors. 
+
+ 5. Crop type matters. Cassava is most productive and resilient.  
+
+  
+
+CONCLUSION  
+
+The analysis shows that climate change affects agricultural productivity primarily through rainfall variability than temperature changes. While temperature exhibits a weak and inconsistent relationship with crop yield, rainfall demonstrates a stronger and more direct influence. The instability in rainfall patterns contributes to fluctuations in crop yield across countries. Additionally, differences in crop types highlight the importance of selecting climate-resilient crops to sustain agricultural productivity.  
+
+  
+
+RECOMMENDATIONS  
+
+  
+
+1. Invest in irrigation systems  
+
+Since rainfall is inconsistent, irrigation will ensure stable water supply and improve yield.  
+
+  2. Promote drought- and heat-resistant crops  
+
+Encourage crops like cassava that perform well under climate variability.  
+
+  3. Diversify crop production  
+
+Farmers should grow multiple crops to reduce risk from climate fluctuations.  
+
+  
+
+4. Implement climate-smart agriculture  
+
+Mulching  
+
+Soil conservation  
+
+Efficient water use  
+
+ 5. Improve climate data access for farmers  
+
+Provide weather forecasts to guide planting and harvesting decisions.  
+
+ 6. Government policy support  
+
+Subsidies, training, and infrastructure to help farmers adapt to climate change.  
+
+ 
+
+TECHNOLOGY USED 
+
+Power Query 
+
+PowerBi 
+
+Excel 
+
+Copilot  
+
+Claude.ai 
+
+ChatGPT 
+
+ 
+
+DEVELOPMENT PROCESS AND LESSON LEARNT 
+
+The development process included: 
+
+1. A group brainstorm session on project topics generated from AI suggestions; Lessons here included the need for patience, compromise and collaboration among team members in arriving at topics for the project.  
+
+ 
+
+2. Use of AI for data sourcing, merging and cleaning; Lessons here included the advantage of AI in identifying and troubleshooting problems during the data sourcing, merging and cleaning process. 
+
+ 
+
+3. Use of AI for data modelling, analysis and visuals’ optimization; Lessons here include the use of proper prompting to generate insightful dashboards.  
+
+ 
+
+4. Insights and storytelling; Lessons here include the need for creativity and insight in communicating the findings. 
+
+Overall, team work is very important to achieve success. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
